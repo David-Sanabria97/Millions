@@ -1,0 +1,28 @@
+[{
+ 
+  "IdPropertyImage": "IMG001",
+  "IdProperty": "PROP001",
+  "File": "none",
+  "Enabled": true
+},
+{
+ 
+  "IdPropertyImage": "IMG002",
+  "IdProperty": "PROP002",
+  "File": "none",
+  "Enabled": true
+},
+{
+ 
+  "IdPropertyImage": "IMG003",
+  "IdProperty": "PROP001",
+  "File": "none",
+  "Enabled": true
+},
+{
+
+  "IdPropertyImage": "IMG004",
+  "IdProperty": "PROP002",
+  "File": "none",
+  "Enabled": true
+}]

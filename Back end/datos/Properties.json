@@ -1,9 +1,31 @@
-{
+[{
+ 
   "IdProperty": "PROP001",
-  "Name": "Casa Bonita",
+  "Name": "Casa 1",
   "Address": "Calle 456",
   "Price": 250000,
   "CodeInternal": "INT-001",
   "Year": 2010,
   "IdOwner": "OWN001"
-}
+},
+{
+  
+  "IdProperty": "PROP002",
+  "Name": "Casa 2",
+  "Address": "Calle 466",
+  "Price": 150000,
+  "CodeInternal": "INT-002",
+  "Year": 2010,
+  "IdOwner": "OWN001"
+}, {
+  "_id": {
+    "$oid": "68d1503764c3d72c35a9e8d1"
+  },
+  "IdProperty": "PROP003",
+  "Name": "Casa 3",
+  "Address": "Calle 459",
+  "Price": 450000,
+  "CodeInternal": "INT-003",
+  "Year": 2010,
+  "IdOwner": "OWN002"
+}]
