@@ -1,0 +1,9 @@
+{
+  "IdProperty": "PROP001",
+  "Name": "Casa Bonita",
+  "Address": "Calle 456",
+  "Price": 250000,
+  "CodeInternal": "INT-001",
+  "Year": 2010,
+  "IdOwner": "OWN001"
+}

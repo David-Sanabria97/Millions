@@ -1,0 +1,8 @@
+{
+  "IdPropertyTrace": "TRACE001",
+  "DateSale": "2023-08-10",
+  "Name": "Venta a Pedro",
+  "Value": 270000,
+  "Tax": 13500,
+  "IdProperty": "PROP001"
+}
