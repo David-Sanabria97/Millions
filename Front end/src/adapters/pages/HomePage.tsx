@@ -78,12 +78,12 @@ export default function HomePage() {
         </Card>
         <Modal open={!!property} > 
           <div >
-            <div className="relative">
+            <div style={{ position: "relative", width: "100%", height: "300px", overflow: "hidden" }}>
               <img
                 src={property?.images[0]?.file}
                 alt={property?.name}
                 width={"100%"}
-                style={{borderRadius:"5px 5px 0 0",}}
+                style={{borderRadius:"5px 5px 0 0", }}
               />
               <button
                 onClick={() => {setProperty(null)}}
@@ -96,7 +96,7 @@ export default function HomePage() {
                 <XIcon size={20} />
               </button>
               <div 
-                style={{ position:"absolute", bottom:"240px", left:"0px",   
+                style={{ position:"absolute", bottom:"0px", left:"0px",   
                           background: "linear-gradient(to top, black, transparent)",
                           color: "white",
                         padding:" 1.5rem",
