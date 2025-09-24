@@ -14,7 +14,7 @@
   
   ```
 
-  crear una nueva conexion en MongoDB compass
+  Crear una nueva conexion en MongoDB compass
 
   Crear una nueva Base de datos llamada RealEstateDataBase ( o cualquier nombre de preferencia)
 
@@ -46,7 +46,7 @@
 }
 ```
 
-  levantar la Back
+  Levantar la Back
 
 ```bash
   dotnet restore
@@ -67,7 +67,7 @@
 npm install
 npm run dev
 ```
-para las pruebas unitarias estan los scripts
+  Para las pruebas unitarias estan los scripts
 
 ```bash
 npm run test
