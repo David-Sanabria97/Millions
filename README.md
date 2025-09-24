@@ -24,7 +24,29 @@
 
   Crear un archivo appsetting.json (en el campo DataBaseName colocar la base de datos que se creo en el paso anterior)
 
-   <pre> ```json { "ConnectionStrings": { "MongoDb": "mongodb://localhost:27017" }, "DatabaseSettings": { "DatabaseName": "RealEstateDb", "Collections": { "Properties": "Properties", "PropertiesImages": "PropertiesImages", "Owners": "Owners", "PropertyTraces": "PropertyTraces" } }, "Logging": { "LogLevel": { "Default": "Information", "Microsoft.AspNetCore": "Warning" } }, "AllowedHosts": "*" } ``` </pre>
+ ```json
+{
+  "ConnectionStrings": {
+    "MongoDb": "mongodb://localhost:27017"
+  },
+  "DatabaseSettings": {
+    "DatabaseName": "RealEstateDb",
+    "Collections": {
+      "Properties": "Properties",
+      "PropertiesImages": "PropertiesImages",
+      "Owners": "Owners",
+      "PropertyTraces": "PropertyTraces"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
 
   levantar la API
 
