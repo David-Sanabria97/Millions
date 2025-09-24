@@ -46,7 +46,7 @@
 }
 ```
 
-  Levantar la Back
+  Levantar el Back end
 
 ```bash
   dotnet restore
