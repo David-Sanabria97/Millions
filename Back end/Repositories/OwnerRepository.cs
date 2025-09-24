@@ -8,7 +8,6 @@ public class OwnerRepository : IOwnerRepository
 {
     private readonly IMongoCollection<Owner> _collection;
 
-    private readonly ILogger<OwnerRepository> _logger;
 
     public OwnerRepository(IConfiguration config )
     
