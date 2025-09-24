@@ -14,7 +14,10 @@ public class PropertyDto
     public decimal Year { get; set; }
     public string IdOwner { get; set; }
 
-    public OwnerDto Owner{get; set;}
+    public decimal Bedrooms { get; set; }
+    public decimal Bathrooms { get; set; }
+    public decimal Area { get; set; }
+    public OwnerDto Owner { get; set; }
     public List<PropertyImageDto> Images{ get; set;}
     public List<PropertyTraceDto> Traces{ get; set;}
 
