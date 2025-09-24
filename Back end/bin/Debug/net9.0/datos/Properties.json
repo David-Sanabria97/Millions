@@ -1,9 +1,39 @@
-{
+[{
+ 
   "IdProperty": "PROP001",
-  "Name": "Casa Bonita",
-  "Address": "Calle 456",
+  "Name": "Casa Moderna en Centro",
+  "Address": "Av. Principal 123, Centro",
   "Price": 250000,
   "CodeInternal": "INT-001",
   "Year": 2010,
-  "IdOwner": "OWN001"
+  "IdOwner": "OWN001",
+  "Bedrooms": 4,
+  "Bathrooms": 5,
+  "Area": 400
+},{
+  
+  "IdProperty": "PROP002",
+  "Name": "Apartamento Ejecutivo",
+  "Address": "Calle Secundaria 456, Norte",
+  "Price": 150000,
+  "CodeInternal": "INT-002",
+  "Year": 2010,
+  "IdOwner": "OWN001",
+  "Bedrooms": 2,
+  "Bathrooms": 1,
+  "Area": 85
+},
+{
+ 
+  "IdProperty": "PROP003",
+  "Name": "Casa Familiar con Jardín",
+  "Address": "Urbanización Las Palmas, Sur",
+  "Price": 450000,
+  "CodeInternal": "INT-003",
+  "Year": 2010,
+  "IdOwner": "OWN002",
+  "Bedrooms": 4,
+  "Bathrooms": 3,
+  "Area": 200
 }
+]

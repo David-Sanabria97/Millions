@@ -1,0 +1,16 @@
+[
+  {
+    "IdOwner": "OWN001",
+    "Name": "Juan Perez",
+    "Address": "Calle 123",
+    "Photo": "none",
+    "BirthDay": "1980-05-15"
+  },
+  {
+    "IdOwner": "OWN002",
+    "Name": "Juan Ramirez",
+    "Address": "Calle 133",
+    "Photo": "none",
+    "BirthDay": "1980-05-15"
+  }
+]

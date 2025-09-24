@@ -3,7 +3,7 @@ import type { Property } from '../../core/model/Property';
 import axios from 'axios';
 import { IFiltersProps } from 'services/GetProperties';
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "http://localhost:5118/api";
 
 
 export class ApiPropertyRepository implements PropertyRepository {
@@ -19,7 +19,7 @@ export class ApiPropertyRepository implements PropertyRepository {
   }
 }
 
-function cleanFilters(filters: IFiltersProps) {
+export function cleanFilters(filters: IFiltersProps) {
   const cleaned: Partial<IFiltersProps> = {};
 
   if (filters.name?.trim()) cleaned.name = filters.name.trim();

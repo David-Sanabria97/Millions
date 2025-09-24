@@ -1,29 +1,12 @@
 import { BedIcon, BathIcon, SquareIcon, MapPinIcon } from 'lucide-react'
 
-import Card from '../components/molecules/Card'
+import Card from './Card'
 import Grid from '@mui/material/Grid'
-import Button from './atoms/Button'
+import Button from '../atoms/Button'
 
-interface PropertyProps {
-  property: {
-    id: number
-    name: string
-    price: number
-    address: string
-    images:  {
-                idPropertyImage: string,
-                idProperty: string,
-                file: string,
-                enabled: boolean
-            }[]
-    bedrooms: number
-    bathrooms: number
-    area: number
-  }
-}
-const PropertyCard = ({ property }: PropertyProps) => {
+
+const PropertyCard = ({ property }: any) => {
   const { name, price, address, images, bedrooms, bathrooms, area } = property
-  // Format price with commas
   const formattedPrice = price.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',

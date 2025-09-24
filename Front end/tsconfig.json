@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "react-jsx",
@@ -16,5 +16,5 @@
       "@infrastructure/*": ["infrastructure/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "__mocks__"]
 }

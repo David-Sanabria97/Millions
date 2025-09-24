@@ -2,15 +2,14 @@ import { useEffect, useState } from 'react';
 import { ApiPropertyRepository } from '../../infrastructure/api/ApiPropertyRepository';
 import { FetchProperties } from '../../core/useCases/FetchProperties';
 import { Property } from '../../core/model/Property';
-import PropertyCard from '../components/PropertyCard';
+import PropertyCard from '../components/molecules/PropertyCard';
 import RangeSlider from '../components/atoms/RangeSlider';
 import InputText from '../components/atoms/InputText';
 import Grid from '@mui/material/Grid';
 import Card from '../components/molecules/Card';
 import { Box } from '@mui/material';
-import { Search, MapPinIcon, DollarSignIcon, AlignCenter } from 'lucide-react';
+import { Search, MapPinIcon, DollarSignIcon } from 'lucide-react';
 import Button from '../components/atoms/Button';
-
 
 export default function HomePage() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -20,7 +19,7 @@ export default function HomePage() {
     minPrice: 0,
     maxPrice: 0,
   });
-
+  console.log("Filters:", properties);
   const repo = new ApiPropertyRepository();
   const fetchProperties = new FetchProperties(repo);
 
@@ -39,13 +38,12 @@ export default function HomePage() {
   };
 
   const handleChangeRange = (e: Event, newValue: number[]) => {
-    if (Array.isArray(newValue)) {
     setFilters(prev => ({
       ...prev,
       minPrice: newValue[0],
       maxPrice: newValue[1],
     }));
-  } }
+  }
 
   return (
      <>
