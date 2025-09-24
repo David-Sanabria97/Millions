@@ -19,7 +19,6 @@ export default function HomePage() {
     minPrice: 0,
     maxPrice: 0,
   });
-  console.log("Filters:", properties);
   const repo = new ApiPropertyRepository();
   const fetchProperties = new FetchProperties(repo);
 
