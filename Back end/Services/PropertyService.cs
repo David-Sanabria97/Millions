@@ -25,7 +25,12 @@ public class PropertyService
             Price = p.Price,
             CodeInternal = p.CodeInternal,
             Year = p.Year,
-            IdOwner = p.IdOwner
+            IdOwner = p.IdOwner,
+            Bedrooms = p.Bedrooms,
+            Bathrooms = p.Bathrooms,
+            Area = p.Area,
+            
+
         }).ToList();
     }
 
