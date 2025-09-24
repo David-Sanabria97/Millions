@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid'
 import Button from '../atoms/Button'
 
 
-const PropertyCard = ({ property }: any) => {
+const PropertyCard = ({ property, openDetails }: any) => {
   const { name, price, address, images, bedrooms, bathrooms, area } = property
   const formattedPrice = price.toLocaleString('en-US', {
     style: 'currency',
@@ -56,7 +56,7 @@ const PropertyCard = ({ property }: any) => {
             <span>{area} m²</span>
           </Grid>
         </Grid>
-        <Button  color='secondary' >
+        <Button  color='secondary' onClick={() => {openDetails(property)}}  >
           Ver detalles
         </Button>
       </div>

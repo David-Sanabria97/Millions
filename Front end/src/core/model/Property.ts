@@ -3,5 +3,9 @@ export interface Property {
   name: string;
   address: string;
   price: number;
-  image: string;
+  images:{ file: string }[] ;
+  bedrooms: number;
+  bathrooms: number;
+  area: number;
+  description?: string;
 }

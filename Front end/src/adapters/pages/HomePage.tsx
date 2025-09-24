@@ -8,11 +8,13 @@ import InputText from '../components/atoms/InputText';
 import Grid from '@mui/material/Grid';
 import Card from '../components/molecules/Card';
 import { Box } from '@mui/material';
-import { Search, MapPinIcon, DollarSignIcon } from 'lucide-react';
+import { Search, MapPinIcon, DollarSignIcon, XIcon, BedIcon, BathIcon, SquareIcon } from 'lucide-react';
 import Button from '../components/atoms/Button';
+import Modal from '../components/molecules/Modal';
 
 export default function HomePage() {
   const [properties, setProperties] = useState<Property[]>([]);
+  const [property, setProperty] = useState<Property | null>(null);
   const [filters, setFilters] = useState({
     name: "",
     address: "",
@@ -74,10 +76,93 @@ export default function HomePage() {
               </Grid>
             </Grid>
         </Card>
+        <Modal open={!!property} > 
+          <div >
+            <div className="relative">
+              <img
+                src={property?.images[0]?.file}
+                alt={property?.name}
+                width={"100%"}
+                style={{borderRadius:"5px 5px 0 0",}}
+              />
+              <button
+                onClick={() => {setProperty(null)}}
+                style={{ position:"absolute", top: "16px", right: "16px",
+                  background: "white", padding: "3px", borderRadius: "20px",
+                  border: "none", cursor: "pointer",
+                }}
+                aria-label="Cerrar"
+              >
+                <XIcon size={20} />
+              </button>
+              <div 
+                style={{ position:"absolute", bottom:"240px", left:"0px",   
+                          background: "linear-gradient(to top, black, transparent)",
+                          color: "white",
+                        padding:" 1.5rem",
+                        width:"100%",
+                }}
+              >
+                <h2>{property?.name}</h2>
+                <p>
+                  <MapPinIcon size={18} />
+                  {property?.address}
+                </p>
+              </div>
+            </div>
+            <div style={{ padding: "1.5rem" }}>
+              <div  
+                style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between", alignItems:"center",
+                   marginBottom:"1.5rem"}}
+              >
+                <div>
+                  {property?.price.toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    maximumFractionDigits: 0,
+                  })}
+                </div>
+                <Grid container spacing={2} >
+                  <Grid>
+                    <BedIcon size={20} className="mr-2 text-gray-600" />
+                    <span>{property?.bedrooms} habitaciones</span>
+                  </Grid>
+                  <Grid>
+                    <BathIcon size={20} className="mr-2 text-gray-600" />
+                    <span>{property?.bathrooms} baños</span>
+                  </Grid>
+                  <Grid>
+                    <SquareIcon size={20} className="mr-2 text-gray-600" />
+                    <span>{property?.area} m²</span>
+                  </Grid>
+                </Grid>
+              </div>
+              <div style={{borderTop: "1px solid #dfdedeff", paddingTop: "1.5rem"}}>
+                <h3 >
+                  Detalles de la propiedad
+                </h3>
+            
+                <h3 >Descripción</h3>
+                <div style={{display:"flex", gap:"1rem", justifyContent:"space-between"}}>
+                    <Button 
+                    color='secondary'
+                  >
+                     Agendar visita
+                  </Button>
+                   <Button 
+                    color='primary'
+                  >
+                     Contactar agente
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Modal>
         <Grid container spacing={2} style={{ marginTop: 16 }}>
           {properties.map((property) => (
             <Grid size={{ xs: 12, md: 4 }}>
-              <PropertyCard key={property.idOwner} property={property} />
+              <PropertyCard key={property.idOwner} property={property} openDetails={setProperty} />
             </Grid>
               ))}
         </Grid>
