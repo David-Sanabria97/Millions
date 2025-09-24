@@ -6,7 +6,7 @@ namespace PropertyAPI.Models;
 public class Property
 {
     [BsonRepresentation(BsonType.ObjectId)]
-     [BsonElement("_id")]
+    [BsonElement("_id")]
     public string Id { get; set; }
 
     [BsonElement("IdProperty")]
@@ -17,6 +17,9 @@ public class Property
     public string CodeInternal { get; set; }
     public decimal Year { get; set; }
     public string IdOwner { get; set; }
+    public decimal Bedrooms { get; set; }
+    public decimal Bathrooms { get; set; }
+    public decimal Area { get; set; }
 
 
 }

@@ -45,6 +45,9 @@ public class GetPropertyDetailUseCase
             CodeInternal = property.CodeInternal,
             Year = property.Year,
             IdProperty = property.IdProperty,
+            Bedrooms = property.Bedrooms,
+            Bathrooms = property.Bathrooms,
+            Area = property.Area,
             Owner = owner == null ? null : new OwnerDto
             {
                 Name = owner.Name,

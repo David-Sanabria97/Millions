@@ -1,6 +1,0 @@
-{
-  "IdPropertyImage": "IMG001",
-  "IdProperty": "PROP001",
-  "File": "https://example.com/casa.jpg",
-  "Enabled": true
-}
