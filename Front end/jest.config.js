@@ -5,9 +5,8 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
-  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
